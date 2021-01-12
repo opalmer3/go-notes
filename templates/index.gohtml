@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/static/css/index.css">
+
+    <title>Notes</title>
+  </head>
+  <body>
+    {{if .IsLoggedIn}}
+      {{template "headerLoggedIn"}}
+    {{else}}
+      {{template "headerLoggedOut"}}
+    {{end}}
+
+    <h1 class="title">To Do List</h1>
+
+    <form id="add-form" action="/add" method="post">
+      <textarea class="note-input"name="note"></textarea>
+      <button class="add-note-btn" type="submit">Note</button>
+    </form>
+
+    <div class="notes-container">
+
+      {{range .Notes}}
+      <span  id=note{{.Id}} class="note-box">
+          <div class="note-content">{{.Content}}</div>
+          <div class="note-date">{{.Date}}</div>
+          <div class="note-btns">
+            <button type="button" class="edit-btn" value={{.Id}}>Edit</button>
+            <button type="button" class="delete-btn" value={{.Id}}>Delete</button>
+          </div>
+      </span>
+      {{end}}
+
+    </div>
+
+    <script src="/static/js/index.js" charset="utf-8"></script>
+  </body>
+</html>

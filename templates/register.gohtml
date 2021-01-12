@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/static/css/index.css">
+
+    <title>Notes - Register</title>
+  </head>
+  <body>
+
+    {{template "headerLoggedOut"}}
+
+    <form  action="/register" method="post">
+      <input type="text" name="username" placeholder="Username">
+      <input type="text" name="fName" placeholder="First name">
+      <input type="text" name="lName" placeholder="Last name">
+      <input type="password" name="password" placeholder="Password">
+      <input type="password" name="passwordAgain" placeholder="Repeat Password">
+      <button class="register-btn" type="submit">Register</button>
+    </form>
+
+    {{if .}}
+    <div class="error-msg">
+      {{.}}
+    </div>
+    {{end}}
+
+    <script src="/static/js/index.js" charset="utf-8"></script>
+  </body>
+</html>

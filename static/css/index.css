@@ -1,0 +1,191 @@
+body{
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  font-family: 'Roboto', arial, sans-serif;
+  margin: 0;
+  padding: 20px 5%;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Dancing Script', georgia, cursive;
+}
+
+header{
+  text-align: right;
+}
+
+header a{
+  margin: 10px 20px;
+}
+
+.title{
+  font-size: 3rem;
+  text-align: center;
+}
+
+#add-form{
+  text-align: center;
+}
+
+.note-input{
+  background: transparent;
+  height: 25px;
+  width: 400px;
+  font-size: 1.3rem;
+  border: none;
+  border-bottom: 2px solid #F3D3BD;
+  transition: all 0.15s linear;
+}
+
+.add-note-btn{
+  background: transparent;
+  display: block;
+  margin: 10px auto;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 2px solid #F3D38D;
+  font-family: inherit;
+  font-size: 1.1rem;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.add-note-btn:focus{
+  outline: none;
+}
+
+#add-form:hover .note-input{
+  outline: none;
+  height: 100px;
+}
+
+.note-input:focus{
+  outline: none;
+  height: 100px;
+}
+
+.notes-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.note-box{
+  height: 274px;
+  flex: 0 0 250px;
+  display: flex;
+  flex-direction: column;
+  background-image: url('../images/post-it.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 5px;
+  margin: 10px 20px;
+  position: relative;
+}
+
+.note-content{
+  font-family: 'Patrick Hand', arial, cursive;
+  font-size: 1.3rem;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  flex: 1;
+  overflow-y: scroll;
+}
+
+.note-content::-webkit-scrollbar{
+  background: transparent;
+  width: 5px;
+}
+.note-content::-webkit-scrollbar-thumb{
+  background-color: lightgrey;
+  border-radius: 10px;
+  width: 10px;
+}
+
+.note-date{
+  font-family: inherit;
+  font-size: 0.8rem;
+  flex: 0 0 20px;
+  color: 	#928E85;
+}
+
+.note-btns{
+  position: absolute;
+  text-align: right;
+  bottom: 10px;
+  right: 10px;
+}
+
+.edit-form{
+  text-align: center;
+}
+
+.edit-note-input{
+    background: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    width: 245px;
+    height: 150px;
+}
+
+.edit-note-input:focus{
+  outline: none;
+}
+
+.edit-note-btn, .cancel-note-btn{
+  background: transparent;
+  margin: 0 5px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-family: 'Roboto';
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.cancel-note-btn{
+  background: black;
+  color: white;
+}
+
+.error-msg{
+  white-space: pre-line;
+  color: red;
+}
+
+/* roboto-regular - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), url('../fonts/roboto-v20-latin-regular.woff') format('woff')
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Roboto'), url('../fonts/roboto-v20-latin-300.woff') format('woff')
+
+}
+
+/* patrick-hand-regular - latin */
+@font-face {
+  font-family: 'Patrick Hand';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Patrick Hand'), url('../fonts/patrick-hand-v14-latin-regular.woff') format('woff')
+}
+
+/* dancing-script-regular - latin */
+@font-face {
+  font-family: 'Dancing Script';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Dancing Script'),url('../fonts/dancing-script-v15-latin-regular.woff') format('woff')
+}

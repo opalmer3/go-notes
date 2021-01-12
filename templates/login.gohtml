@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/static/css/index.css">
+
+    <title>Notes - Log In</title>
+  </head>
+  <body>
+
+      {{template "headerLoggedOut"}}
+
+    <form  action="/login" method="post">
+      <input type="text" name="username" placeholder="Username">
+      <input type="password" name="password" placeholder="Password">
+      <button class="register-btn" type="submit">Log In</button>
+    </form>
+
+    {{if .}}
+    <div class="error-msg">
+      {{.}}
+    </div>
+    {{end}}
+
+    <script src="/static/js/index.js" charset="utf-8"></script>
+  </body>
+</html>
